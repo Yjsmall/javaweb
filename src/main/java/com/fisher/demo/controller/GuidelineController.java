@@ -1,5 +1,6 @@
 package com.fisher.demo.controller;
 
+import com.fisher.demo.dto.GuidelineDTO;
 import com.fisher.demo.model.Guideline;
 import com.fisher.demo.service.GuidelineService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -20,7 +21,7 @@ public class GuidelineController {
 
     @Operation(summary = "获取攻略列表")
     @GetMapping("/all")
-    public List<Guideline> getGuidelines() {
+    public List<GuidelineDTO> getGuidelines() {
         return guidelineService.getAllGuidelines();
     }
 
